@@ -10,8 +10,8 @@
 
     <item
         android:id="@+id/menu_repairs"
-        android:title="@string/listado_repair"
         android:icon="@android:drawable/ic_menu_edit"
+        android:title="@string/listado_repair"
         app:showAsAction="ifRoom|withText" />
 
 </menu>
