@@ -1,3 +1,5 @@
 <resources>
     <string name="app_name">EcoRepairMobile</string>
+    <string name="listado_device">Listado de dispositivos</string>
+    <string name="listado_repair">Listado de reparaciones</string>
 </resources>
