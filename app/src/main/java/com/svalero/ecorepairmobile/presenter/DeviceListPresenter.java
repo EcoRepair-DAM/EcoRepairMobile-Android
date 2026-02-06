@@ -17,7 +17,6 @@ public class DeviceListPresenter implements DeviceListContract.Presenter,
     public DeviceListPresenter(DeviceListContract.View view) {
         this.view = view;
         this.model = new DeviceListModel();
-
     }
 
     @Override

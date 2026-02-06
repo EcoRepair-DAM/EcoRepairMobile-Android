@@ -40,6 +40,7 @@ public class DeviceListView extends AppCompatActivity implements DeviceListContr
         adapter = new DeviceAdapter(devices,
                 device -> {
                     Intent i = new Intent(DeviceListView.this, DeviceDetailView.class);
+                    i.putExtra(DeviceDetailView.EXTRA_ID, device.getId());
                     startActivity(i);
                 },
                 device -> showDeleteConfirmation(device)
@@ -47,7 +48,7 @@ public class DeviceListView extends AppCompatActivity implements DeviceListContr
 
         rv.setAdapter(adapter);
 
-    }
+     }
 
     @Override
     public boolean onCreateOptionsMenu(Menu menu) {
