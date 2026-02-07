@@ -26,6 +26,8 @@
 
         <activity android:name=".view.DeviceListView" />
         <activity android:name=".view.DeviceDetailView" />
+        <activity android:name=".view.RepairListView" />
+        <activity android:name=".view.RepairDetailView" />
     </application>
 
 </manifest>

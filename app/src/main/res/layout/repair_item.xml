@@ -16,85 +16,78 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content">
 
-        <!-- Border Top Simulation -->
+        <!-- Border Left Simulation -->
         <View
-            android:id="@+id/top_border"
-            android:layout_width="match_parent"
-            android:layout_height="4dp"
+            android:id="@+id/left_border"
+            android:layout_width="5dp"
+            android:layout_height="0dp"
             android:background="@color/brand_primary"
-            app:layout_constraintTop_toTopOf="parent"/>
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"/>
 
         <androidx.constraintlayout.widget.ConstraintLayout
-            android:layout_width="match_parent"
+            android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:padding="24dp"
-            app:layout_constraintTop_toBottomOf="@id/top_border">
+            app:layout_constraintStart_toEndOf="@id/left_border"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent">
 
             <TextView
-                android:id="@+id/device_name"
+                android:id="@+id/repair_description"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Nombre"
-                android:textColor="@color/brand_primary"
+                android:text="Descripcion"
+                android:textColor="@color/text_primary"
                 android:textStyle="bold"
                 android:textSize="18sp"
                 app:layout_constraintTop_toTopOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/btn_delete_device"/>
+                app:layout_constraintEnd_toStartOf="@id/btn_delete_repair"/>
 
             <TextView
-                android:id="@+id/device_brand_label"
+                android:id="@+id/repair_cost"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Marca: "
+                android:text="150.00€"
+                android:textColor="@color/success_color"
+                android:textStyle="bold"
+                android:textSize="20sp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintTop_toBottomOf="@id/repair_description"
+                app:layout_constraintStart_toStartOf="parent"/>
+
+            <TextView
+                android:id="@+id/repair_date_label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Fecha: "
                 android:textColor="@color/text_secondary"
                 android:textSize="14sp"
                 android:textStyle="bold"
                 android:layout_marginTop="8dp"
-                app:layout_constraintTop_toBottomOf="@id/device_name"
+                app:layout_constraintTop_toBottomOf="@id/repair_cost"
                 app:layout_constraintStart_toStartOf="parent"/>
 
             <TextView
-                android:id="@+id/device_brand"
+                android:id="@+id/repair_date"
                 android:layout_width="0dp"
                 android:layout_height="wrap_content"
-                android:text="Apple"
+                android:text="2023-10-15"
                 android:textColor="@color/text_primary"
                 android:textSize="14sp"
                 android:layout_marginStart="4dp"
-                app:layout_constraintTop_toTopOf="@id/device_brand_label"
-                app:layout_constraintStart_toEndOf="@id/device_brand_label"
-                app:layout_constraintBaseline_toBaselineOf="@id/device_brand_label"/>
-
-            <TextView
-                android:id="@+id/device_type_label"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Tipo: "
-                android:textColor="@color/text_secondary"
-                android:textSize="14sp"
-                android:textStyle="bold"
-                android:layout_marginTop="4dp"
-                app:layout_constraintTop_toBottomOf="@id/device_brand_label"
-                app:layout_constraintStart_toStartOf="parent"/>
-
-            <TextView
-                android:id="@+id/device_type"
-                android:layout_width="0dp"
-                android:layout_height="wrap_content"
-                android:text="Smartphone"
-                android:textColor="@color/text_primary"
-                android:textSize="14sp"
-                android:layout_marginStart="4dp"
-                app:layout_constraintTop_toTopOf="@id/device_type_label"
-                app:layout_constraintStart_toEndOf="@id/device_type_label"
-                app:layout_constraintBaseline_toBaselineOf="@id/device_type_label"/>
+                app:layout_constraintTop_toTopOf="@id/repair_date_label"
+                app:layout_constraintStart_toEndOf="@id/repair_date_label"
+                app:layout_constraintBaseline_toBaselineOf="@id/repair_date_label"/>
 
             <ImageButton
-                android:id="@+id/btn_delete_device"
+                android:id="@+id/btn_delete_repair"
                 android:layout_width="48dp"
                 android:layout_height="48dp"
-                android:contentDescription="Eliminar dispositivo"
+                android:contentDescription="Eliminar reparación"
                 android:background="?attr/selectableItemBackgroundBorderless"
                 android:padding="12dp"
                 android:src="@android:drawable/ic_menu_delete"
@@ -103,6 +96,7 @@
                 app:layout_constraintEnd_toEndOf="parent"/>
 
         </androidx.constraintlayout.widget.ConstraintLayout>
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </com.google.android.material.card.MaterialCardView>
