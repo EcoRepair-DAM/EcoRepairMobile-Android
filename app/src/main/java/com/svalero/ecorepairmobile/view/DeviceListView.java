@@ -84,12 +84,12 @@ public class DeviceListView extends AppCompatActivity implements DeviceListContr
 
     private void showDeleteConfirmation(Device device) {
         new androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Eliminar dispositivo")
-                .setMessage("¿Seguro que lo quieres eliminar?")
-                .setPositiveButton("Eliminar", (dialog, which) ->
+                .setTitle("Delete Device")
+                .setMessage("¿Are you sure you want to delete?")
+                .setPositiveButton("Delete", (dialog, which) ->
                         presenter.deleteDevice(device.getId())
                 )
-                .setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss())
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                 .show();
     }
 }

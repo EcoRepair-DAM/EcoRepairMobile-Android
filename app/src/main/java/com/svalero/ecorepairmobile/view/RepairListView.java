@@ -83,10 +83,10 @@ public class RepairListView extends AppCompatActivity implements RepairListContr
 
     private void showDeleteConfirmation(Repair repair) {
         new androidx.appcompat.app.AlertDialog.Builder(this)
-                .setTitle("Eliminar reparación")
-                .setMessage("¿Seguro que lo quieres eliminar?")
-                .setPositiveButton("Eliminar", (dialog, which) -> presenter.deleteRepair(repair.getId()))
-                .setNegativeButton("Cancelar", (dialog, which) -> dialog.dismiss())
+                .setTitle("Delete repair")
+                .setMessage("¿Are you sure to want to delete?")
+                .setPositiveButton("Delete", (dialog, which) -> presenter.deleteRepair(repair.getId()))
+                .setNegativeButton("Cancel", (dialog, which) -> dialog.dismiss())
                 .show();
     }
 }
