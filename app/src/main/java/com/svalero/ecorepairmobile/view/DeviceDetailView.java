@@ -56,15 +56,15 @@ public class DeviceDetailView extends AppCompatActivity implements DeviceDetailC
 
     @Override
     public void showDevice(Device device) {
-        tvName.setText("Nombre: " + device.getName());
-        tvBrand.setText("Marca: " + device.getBrand());
-        tvType.setText("Tipo: " + device.getType());
+        tvName.setText("Name: " + device.getName());
+        tvBrand.setText("Brand: " + device.getBrand());
+        tvType.setText("Type: " + device.getType());
         if (device.getPurchaseDate() != null) {
             String fecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
                     .format(device.getPurchaseDate());
-            tvDate.setText("Fecha fabricación: " + fecha);
-        } else tvDate.setText("Fecha fabricación: -");
-        tvReusable.setText("Reutilizable: " + (device.isReusable() ? "Sí" : "No"));
+            tvDate.setText("Purchase Date: " + fecha);
+        } else tvDate.setText("Purchase Date: -");
+        tvReusable.setText("Reusable: " + (device.isReusable() ? "Yes" : "No"));
     }
 
     @Override

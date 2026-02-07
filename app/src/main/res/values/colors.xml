@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="brand_primary">#2563eb</color> <!-- Blue from Web -->
-    <color name="brand_primary_variant">#1e293b</color> <!-- Dark from Web (used for text/headers) -->
-    <color name="brand_secondary">#f8fafc</color> <!-- Light from Web -->
-    <color name="brand_secondary_variant">#e2e8f0</color> <!-- Border from Web -->
-    <color name="background_color">#f8fafc</color> <!-- Light Background -->
+    <color name="brand_primary">#2563eb</color>
+    <color name="brand_primary_variant">#1e293b</color>
+    <color name="brand_secondary">#f8fafc</color>
+    <color name="brand_secondary_variant">#e2e8f0</color>
+    <color name="background_color">#f8fafc</color>
     <color name="surface_color">#FFFFFF</color>
     <color name="error_color">#B00020</color>
     <color name="success_color">#166534</color>
     <color name="warning_color">#854d0e</color>
-    <color name="text_primary">#1e293b</color> <!-- Dark -->
-    <color name="text_secondary">#64748b</color> <!-- Muted blue-grey -->
+    <color name="text_primary">#1e293b</color>
+    <color name="text_secondary">#64748b</color>
     <color name="white">#FFFFFF</color>
 </resources>

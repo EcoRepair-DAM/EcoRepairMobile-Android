@@ -40,7 +40,7 @@ public class RepairDetailView extends AppCompatActivity implements RepairDetailC
         if (repairId != -1)
             presenter.loadRepair(repairId);
         else {
-            showError("ID de reparación no válido");
+            showError("ID of repair invalid");
             finish();
         }
 
@@ -58,14 +58,14 @@ public class RepairDetailView extends AppCompatActivity implements RepairDetailC
 
     @Override
     public void showRepair(Repair repair) {
-        tvDescription.setText("Descripción: " + repair.getDescription());
-        tvCost.setText("Coste: " + repair.getCost());
+        tvDescription.setText("Description: " + repair.getDescription());
+        tvCost.setText("Price: " + repair.getCost());
         if (repair.getRepairDate() != null) {
             String fecha = new SimpleDateFormat("yyyy-MM-dd", Locale.getDefault())
                     .format(repair.getRepairDate());
-            tvDate.setText("Fecha: " + fecha);
+            tvDate.setText("Date: " + fecha);
         } else
-            tvDate.setText("Fecha: -");
+            tvDate.setText("Date: -");
     }
 
     @Override
